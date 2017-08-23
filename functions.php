@@ -19,5 +19,5 @@ function remove_parent_action() {
 add_action( 'oblique_footer', 'oblique_child_footer_credits' );
 
 function oblique_child_footer_credits() {
-  echo 'Copyright © 2017 SB23 Productions.';
+  echo 'Copyright © ' . date("Y") . ' ' . get_bloginfo( 'name' );
 }
