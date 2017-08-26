@@ -7,9 +7,9 @@ function enqueue_parent_styles() {
   wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css' );
 }
 
-add_action( 'init', 'remove_parent_action');
+add_action( 'after_setup_theme', 'oblique_child_setup', 20 );
 
-function remove_parent_action() {
+function oblique_child_setup() {
   remove_action( 'oblique_footer', 'oblique_footer_credits' );
 }
 
