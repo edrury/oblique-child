@@ -11,6 +11,7 @@ add_action( 'after_setup_theme', 'oblique_child_setup', 20 );
 
 function oblique_child_setup() {
   remove_action( 'oblique_footer', 'oblique_footer_credits' );
+  register_nav_menu( 'top-menu', __( 'Top Menu' ) );
 }
 
 /**
